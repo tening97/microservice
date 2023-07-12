@@ -11,22 +11,35 @@ import java.text.SimpleDateFormat;
 public class PersonneMapper {
 
     public Personne personneDtoToPersonneEntity(PersonneDto personneDto) throws ParseException {
-        return Personne.builder()
-                .id(personneDto.getId())
-                .nomComplet(personneDto.getNomComplet())
-                .dateNaissance(new SimpleDateFormat("dd/MM/yyyy").parse(personneDto.getDateNaissance()))
-                .personneStatus(personneDto.getPersonneStatus())
-                .build();
+//        return Personne.builder()
+//                .id(personneDto.getId())
+//                .nomComplet(personneDto.getNomComplet())
+//                .dateNaissance(new SimpleDateFormat("dd/MM/yyyy").parse(personneDto.getDateNaissance()))
+//                .personneStatus(personneDto.getPersonneStatus())
+//                .build();
+        Personne personne = new Personne();
+        personne.setAgeStatus(personneDto.getAgeStatus());
+        personne.setNomComplet(personneDto.getNomComplet());
+        personne.setDateNaissance(new SimpleDateFormat("dd/MM/yyyy").parse(personneDto.getDateNaissance()));
+        personne.setPersonneStatus(personneDto.getPersonneStatus());
+        return personne;
     }
 
 
     public PersonneDto personneEntityToPersonneDto(Personne personne) throws ParseException {
-        return PersonneDto.builder()
-                .id(personne.getId())
-                .nomComplet(personne.getNomComplet())
-                .dateNaissance(new SimpleDateFormat("dd/MM/yyyy").format(personne.getDateNaissance()))
-                .personneStatus(personne.getPersonneStatus())
-                .build();
+        PersonneDto personneDto = new PersonneDto();
+        personneDto.setPersonneStatus(personne.getPersonneStatus());
+        personneDto.setDateNaissance(new SimpleDateFormat("dd/MM/yyyy").format(personne.getDateNaissance()));
+        personneDto.setNomComplet(personne.getNomComplet());
+        personneDto.setId(personne.getId());
+
+//        return PersonneDto.builder()
+//                .id(personne.getId())
+//                .nomComplet(personne.getNomComplet())
+//                .dateNaissance(new SimpleDateFormat("dd/MM/yyyy").format(personne.getDateNaissance()))
+//                .personneStatus(personne.getPersonneStatus())
+//                .build();
+        return personneDto;
     }
 
 }

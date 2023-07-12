@@ -8,10 +8,6 @@ import lombok.NoArgsConstructor;
 
 import java.util.UUID;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
 public class PersonneAgeDto {
 
     private UUID personneId;
@@ -20,4 +16,32 @@ public class PersonneAgeDto {
 
     private AgeStatus ageStatus;
 
+    public UUID getPersonneId() {
+        return personneId;
+    }
+
+    public void setPersonneId(UUID personneId) {
+        this.personneId = personneId;
+    }
+
+    public long getAge() {
+        return age;
+    }
+
+    public void setAge(long age) {
+        this.age = age;
+    }
+
+    public AgeStatus getAgeStatus() {
+        return ageStatus;
+    }
+
+    public void setAgeStatus(AgeStatus ageStatus) {
+        this.ageStatus = ageStatus;
+    }
+
+    public PersonneAgeDto(UUID personneId, long age) {
+        this.personneId = personneId;
+        this.age = age;
+    }
 }

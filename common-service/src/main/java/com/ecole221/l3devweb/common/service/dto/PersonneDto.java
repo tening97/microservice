@@ -10,10 +10,6 @@ import lombok.NoArgsConstructor;
 import java.util.UUID;
 
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
 public class PersonneDto {
 
     private UUID id;
@@ -24,7 +20,57 @@ public class PersonneDto {
 
     private PersonneStatus personneStatus;
 
+    private AgeStatus ageStatus;
+
+    public PersonneDto(UUID id, String nomComplet, String dateNaissance, PersonneStatus personneStatus , AgeStatus ageStatus) {
+        this.id = id;
+        this.nomComplet = nomComplet;
+        this.dateNaissance = dateNaissance;
+        this.personneStatus = personneStatus;
+        this.ageStatus = ageStatus;
+
+    }
 
 
 
+    public PersonneDto(){}
+    public UUID getId() {
+        return id;
+    }
+
+    public void setId(UUID id) {
+        this.id = id;
+    }
+
+    public String getNomComplet() {
+        return nomComplet;
+    }
+
+    public void setNomComplet(String nomComplet) {
+        this.nomComplet = nomComplet;
+    }
+
+    public String getDateNaissance() {
+        return dateNaissance;
+    }
+
+    public void setDateNaissance(String dateNaissance) {
+        this.dateNaissance = dateNaissance;
+    }
+
+    public PersonneStatus getPersonneStatus() {
+        return personneStatus;
+    }
+
+    public void setPersonneStatus(PersonneStatus personneStatus) {
+        this.personneStatus = personneStatus;
+    }
+
+    public AgeStatus getAgeStatus() {
+        return ageStatus;
+    }
+
+    public void setAgeStatus(AgeStatus ageStatus) {
+        this.ageStatus = ageStatus;
+    }
 }

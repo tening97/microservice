@@ -1,0 +1,10 @@
+com\ecole221\microsdervices\course\second\service\config\Consumer.class
+com\ecole221\microsdervices\course\second\service\repository\AgeRepository.class
+com\ecole221\microsdervices\course\second\service\controller\PersonneController.class
+com\ecole221\microsdervices\course\second\service\SecondServiceApplication.class
+com\ecole221\microsdervices\course\second\service\entity\AgeEntity.class
+com\ecole221\microsdervices\course\second\service\config\AgeServiceKafka.class
+com\ecole221\microsdervices\course\second\service\mapper\AgeMapper.class
+com\ecole221\microsdervices\course\second\service\config\Producer.class
+com\ecole221\microsdervices\course\second\service\service\AgeService.class
+com\ecole221\microsdervices\course\second\service\service\Utils.class

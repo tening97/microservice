@@ -1,0 +1,10 @@
+com\ecole221\l3devweb\first\service\entity\Personne.class
+com\ecole221\l3devweb\first\service\repository\PersonneRepository.class
+com\ecole221\l3devweb\first\service\controller\PersonneController.class
+com\ecole221\l3devweb\first\service\config\Consumer.class
+com\ecole221\l3devweb\first\service\config\PersonneServiceKafka.class
+com\ecole221\l3devweb\first\service\mapper\PersonneMapper.class
+com\ecole221\l3devweb\first\service\entity\Personne$PersonneBuilder.class
+com\ecole221\l3devweb\first\service\service\PersonneService.class
+com\ecole221\l3devweb\first\service\config\Producer.class
+com\ecole221\l3devweb\first\service\FirstServiceApplication.class

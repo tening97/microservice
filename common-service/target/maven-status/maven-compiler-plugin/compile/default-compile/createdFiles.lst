@@ -1,9 +1,7 @@
-com/ecole221/l3devweb/common/service/dto/PersonneAge.class
-com/ecole221/l3devweb/common/service/event/Event.class
-com/ecole221/l3devweb/common/service/event/PersonneStatus.class
-com/ecole221/l3devweb/common/service/dto/PersonneDto.class
-com/ecole221/l3devweb/common/service/event/PersonneEvent.class
-com/ecole221/l3devweb/common/service/dto/PersonneDto$PersonneDtoBuilder.class
-com/ecole221/l3devweb/common/service/dto/PersonneAge$PersonneAgeBuilder.class
-com/ecole221/l3devweb/common/service/event/AgeEvent.class
-com/ecole221/l3devweb/common/service/event/AgeStatus.class
+com\ecole221\l3devweb\common\service\event\PersonneStatus.class
+com\ecole221\l3devweb\common\service\dto\PersonneDto.class
+com\ecole221\l3devweb\common\service\event\Event.class
+com\ecole221\l3devweb\common\service\event\AgeEvent.class
+com\ecole221\l3devweb\common\service\event\AgeStatus.class
+com\ecole221\l3devweb\common\service\event\PersonneEvent.class
+com\ecole221\l3devweb\common\service\dto\PersonneAgeDto.class

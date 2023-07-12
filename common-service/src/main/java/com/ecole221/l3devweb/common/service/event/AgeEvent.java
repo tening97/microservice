@@ -14,6 +14,11 @@ public class AgeEvent implements  Event{
 
     private Date eventDate = new Date();
 
+    public AgeEvent(PersonneAgeDto ageDTO, AgeStatus updated) {
+        this.personneAgeDto = ageDTO;
+        this.ageStatus = updated;
+    }
+
     @Override
     public UUID getEventId() {
         return eventId;
@@ -22,5 +27,21 @@ public class AgeEvent implements  Event{
     @Override
     public Date getEventDate() {
         return eventDate;
+    }
+
+    public AgeStatus getAgeStatus() {
+        return ageStatus;
+    }
+
+    public void setAgeStatus(AgeStatus ageStatus) {
+        this.ageStatus = ageStatus;
+    }
+
+    public PersonneAgeDto getPersonneAgeDto() {
+        return personneAgeDto;
+    }
+
+    public void setPersonneAgeDto(PersonneAgeDto personneAgeDto) {
+        this.personneAgeDto = personneAgeDto;
     }
 }

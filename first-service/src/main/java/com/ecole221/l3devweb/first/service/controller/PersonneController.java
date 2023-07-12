@@ -7,10 +7,7 @@ import com.ecole221.l3devweb.first.service.service.PersonneService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
@@ -28,12 +25,14 @@ public class PersonneController {
     @ResponseBody
     @GetMapping("/personne/all")
     public ResponseEntity getAll(){
-        return new ResponseEntity(personneService.allPersonnes(), HttpStatus.OK);
+        return new ResponseEntity(personneService.findAll(), HttpStatus.OK);
     }
 
+    @ResponseBody
+    @PostMapping("/personne")
     public ResponseEntity<Object> save(@RequestBody  PersonneDto personneDto) throws ParseException {
 
-        Personne personne = personneService.save(personneDto);
+        Personne personne = personneService.savePersonne(personneDto);
 
         URI location = ServletUriComponentsBuilder.fromCurrentRequest()
                 .path("/{id}").buildAndExpand(personne.getId()).toUri();
