@@ -10,12 +10,14 @@
         <module name="secondservice" />
         <module name="firstservice" />
         <module name="commonservice" />
+        <module name="namingserver" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="commonservice" target="17" />
       <module name="firstservice" target="17" />
       <module name="microservice" target="17" />
+      <module name="namingserver" target="17" />
       <module name="secondservice" target="17" />
     </bytecodeTargetLevel>
   </component>
@@ -23,6 +25,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="commonservice" options="-parameters" />
       <module name="firstservice" options="-parameters" />
+      <module name="namingserver" options="-parameters" />
       <module name="secondservice" options="-parameters" />
     </option>
   </component>
