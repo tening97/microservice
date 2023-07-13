@@ -34,12 +34,13 @@ public class AgeService {
         PersonneDto personneDTO = personneEvent.getPersonneDto();
         long age = Utils.
                 getYearsBetweenToDates(Utils.
-                        convertToLocalDateViaInstant(new SimpleDateFormat("dd/MM/yyyy")
+                        convertToLocalDateViaInstant(new SimpleDateFormat("yyyy-MM-dd")
                                 .parse(personneDTO.getDateNaissance())), LocalDate.now());
         AgeEvent ageEvent = null;
         PersonneAgeDto ageDTO = new PersonneAgeDto(personneDTO.getId(), age);
         try {
             AgeEntity ageEntity = new AgeEntity(personneDTO.getId(), age);
+
             ageRepository.save(ageEntity);
             ageEvent = new AgeEvent(ageDTO, AgeStatus.UPDATED);
         }

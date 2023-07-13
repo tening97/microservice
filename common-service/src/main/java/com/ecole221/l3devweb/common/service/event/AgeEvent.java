@@ -19,6 +19,8 @@ public class AgeEvent implements  Event{
         this.ageStatus = updated;
     }
 
+    public AgeEvent(){}
+
     @Override
     public UUID getEventId() {
         return eventId;

@@ -56,7 +56,7 @@ public class PersonneService {
     @Transactional
     public void updatePersonne(AgeEvent ageEvent) {
         Optional<Personne> personne = personneRepository.findById(ageEvent.getPersonneAgeDto().getPersonneId());
-        if(!personne.isEmpty()){
+        if(personne.isPresent()){
             boolean isAgeSaved = AgeStatus.UPDATED.equals(ageEvent.getAgeStatus());
             PersonneStatus personneStatus = isAgeSaved?PersonneStatus.COMPLETED:PersonneStatus.ERROR_AGE;
             personne.get().setPersonneStatus(personneStatus);

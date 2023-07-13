@@ -32,8 +32,13 @@ public class AgeServiceKafka {
             = "PersonneEventListner")
     public void consumeMessage(PersonneEvent personneEvent) throws JsonProcessingException, ParseException {
 //        log.info("message consumed {}", personneEvent.getEventId());
-        AgeEvent ageEvent = ageService.saveAge(personneEvent);
-        kafkaTemplate.send(ageTopic, ageEvent);
+        try {
+            AgeEvent ageEvent = ageService.saveAge(personneEvent);
+            kafkaTemplate.send(ageTopic, ageEvent);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
     }
 
 

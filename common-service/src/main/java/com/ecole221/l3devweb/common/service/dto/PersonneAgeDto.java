@@ -14,7 +14,6 @@ public class PersonneAgeDto {
 
     private long age;
 
-    private AgeStatus ageStatus;
 
     public UUID getPersonneId() {
         return personneId;
@@ -32,16 +31,10 @@ public class PersonneAgeDto {
         this.age = age;
     }
 
-    public AgeStatus getAgeStatus() {
-        return ageStatus;
-    }
-
-    public void setAgeStatus(AgeStatus ageStatus) {
-        this.ageStatus = ageStatus;
-    }
 
     public PersonneAgeDto(UUID personneId, long age) {
         this.personneId = personneId;
         this.age = age;
     }
+    public PersonneAgeDto(){}
 }
