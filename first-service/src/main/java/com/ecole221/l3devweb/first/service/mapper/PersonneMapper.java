@@ -20,7 +20,7 @@ public class PersonneMapper {
         Personne personne = new Personne();
         personne.setAgeStatus(personneDto.getAgeStatus());
         personne.setNomComplet(personneDto.getNomComplet());
-        personne.setDateNaissance(new SimpleDateFormat("dd/MM/yyyy").parse(personneDto.getDateNaissance()));
+        personne.setDateNaissance(new SimpleDateFormat("yyyy-MM-dd").parse(personneDto.getDateNaissance()));
         personne.setPersonneStatus(personneDto.getPersonneStatus());
         return personne;
     }
