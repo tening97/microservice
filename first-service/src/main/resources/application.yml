@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: First-application
+    name: first-service
 
   datasource:
     driver-class-name: org.postgresql.Driver
